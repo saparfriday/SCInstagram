@@ -5,11 +5,14 @@ target 'SCInstagram' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SCInstagram
+  # Firebase
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'FirebaseFirestoreSwift', '8.3.0-beta'
 
+  # Helpers
+  pod 'SVProgressHUD'
+  
 end

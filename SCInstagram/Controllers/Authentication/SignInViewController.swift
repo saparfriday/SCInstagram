@@ -36,12 +36,15 @@ class SignInViewController: UIViewController {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
         
+        showHUD()
+        
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print(error.localizedDescription)
+                self.showHUD(.error(text: error.localizedDescription))
                 return
             }
             
+            self.showHUD(.dismiss)
             self.dismiss(animated: true)
         }
     }

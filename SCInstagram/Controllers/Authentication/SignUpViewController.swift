@@ -66,9 +66,10 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func signUpDidTapped(_ sender: UIButton) {
+        showHUD()
         
         guard let image = image, let compressedImage = image.jpegData(compressionQuality: 0.4) else {
-            print("You must to load avatar")
+            showHUD(.error(text: "You must to load avatar"))
             return
         }
         
@@ -78,7 +79,7 @@ class SignUpViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print(error.localizedDescription)
+                self.showHUD(.error(text: error.localizedDescription))
                 return
             }
             
@@ -100,7 +101,7 @@ class SignUpViewController: UIViewController {
                 self.delegate?.signUpSuccessfully()
             }
         } catch {
-            print(error.localizedDescription)
+            showHUD(.error(text: error.localizedDescription))
         }
     }
     
@@ -129,7 +130,7 @@ class SignUpViewController: UIViewController {
         
         storageRef.putData(imageData, metadata: metadata) { (_, error) in
             if let error = error {
-                print(error.localizedDescription)
+                self.showHUD(.error(text: error.localizedDescription))
                 return
             }
             storageRef.downloadURL { url, error in

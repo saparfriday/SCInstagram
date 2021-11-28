@@ -14,6 +14,7 @@
 		CE90C25127524B71006AE809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90C25027524B71006AE809 /* Assets.xcassets */; };
 		CE90C25427524B71006AE809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE90C25227524B71006AE809 /* LaunchScreen.storyboard */; };
 		CED0C4202753C68B0064F5B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0C41F2753C68B0064F5B6 /* User.swift */; };
+		CED0C4232753CD970064F5B6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0C4222753CD970064F5B6 /* UIViewControllerExtension.swift */; };
 		CED369842753A02200A7F278 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED369832753A02200A7F278 /* GoogleService-Info.plist */; };
 		CEF1DE7927536A6100212154 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE7727536A6100212154 /* SignInViewController.swift */; };
 		CEF1DE7A27536A6100212154 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE7827536A6100212154 /* SignInViewController.xib */; };
@@ -48,6 +49,7 @@
 		CE90C25327524B71006AE809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE90C25527524B71006AE809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED0C41F2753C68B0064F5B6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CED0C4222753CD970064F5B6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CED369832753A02200A7F278 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEF1DE7727536A6100212154 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CEF1DE7827536A6100212154 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				CED0C41E2753C67F0064F5B6 /* Models */,
 				CEF1DE9C2753806100212154 /* Views */,
 				CEF1DE7627536A3600212154 /* Controllers */,
+				CED0C4212753CD840064F5B6 /* Extensions */,
 			);
 			path = SCInstagram;
 			sourceTree = "<group>";
@@ -139,6 +142,14 @@
 				CED0C41F2753C68B0064F5B6 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CED0C4212753CD840064F5B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CED0C4222753CD970064F5B6 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CEF1DE7627536A3600212154 /* Controllers */ = {
@@ -325,6 +336,7 @@
 			files = (
 				CEF1DE9227537C1300212154 /* AddViewController.swift in Sources */,
 				CEF1DE7927536A6100212154 /* SignInViewController.swift in Sources */,
+				CED0C4232753CD970064F5B6 /* UIViewControllerExtension.swift in Sources */,
 				CE90C24C27524B6F006AE809 /* InitialViewController.swift in Sources */,
 				CEF1DE9627537C2100212154 /* ActivitiesViewController.swift in Sources */,
 				CEF1DE812753772400212154 /* ForgotPasswordViewController.swift in Sources */,

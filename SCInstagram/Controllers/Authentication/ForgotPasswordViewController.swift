@@ -28,13 +28,15 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func recoverDidTapped(_ sender: UIButton) {
         guard let email = emailTextField.text else { return }
+        showHUD()
         
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
-                print(error.localizedDescription)
+                self.showHUD(.error(text: error.localizedDescription))
                 return
             }
-            print("sended")
+            
+            self.showHUD(.success(text: "Link was sended!"))
         }
     }
     
