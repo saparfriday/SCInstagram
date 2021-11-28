@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CE90C24827524B6F006AE809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90C24727524B6F006AE809 /* AppDelegate.swift */; };
 		CE90C24A27524B6F006AE809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90C24927524B6F006AE809 /* SceneDelegate.swift */; };
-		CE90C24C27524B6F006AE809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90C24B27524B6F006AE809 /* ViewController.swift */; };
-		CE90C24F27524B6F006AE809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE90C24D27524B6F006AE809 /* Main.storyboard */; };
+		CE90C24C27524B6F006AE809 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90C24B27524B6F006AE809 /* InitialViewController.swift */; };
 		CE90C25127524B71006AE809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90C25027524B71006AE809 /* Assets.xcassets */; };
 		CE90C25427524B71006AE809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE90C25227524B71006AE809 /* LaunchScreen.storyboard */; };
+		CEF1DE7927536A6100212154 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE7727536A6100212154 /* SignInViewController.swift */; };
+		CEF1DE7A27536A6100212154 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE7827536A6100212154 /* SignInViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE90C24427524B6F006AE809 /* SCInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90C24727524B6F006AE809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE90C24927524B6F006AE809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE90C24B27524B6F006AE809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE90C24E27524B6F006AE809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE90C24B27524B6F006AE809 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CE90C25027524B71006AE809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE90C25327524B71006AE809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE90C25527524B71006AE809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF1DE7727536A6100212154 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CEF1DE7827536A6100212154 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,22 @@
 			children = (
 				CE90C24727524B6F006AE809 /* AppDelegate.swift */,
 				CE90C24927524B6F006AE809 /* SceneDelegate.swift */,
-				CE90C24B27524B6F006AE809 /* ViewController.swift */,
-				CE90C24D27524B6F006AE809 /* Main.storyboard */,
 				CE90C25027524B71006AE809 /* Assets.xcassets */,
 				CE90C25227524B71006AE809 /* LaunchScreen.storyboard */,
 				CE90C25527524B71006AE809 /* Info.plist */,
+				CEF1DE7627536A3600212154 /* Controllers */,
 			);
 			path = SCInstagram;
+			sourceTree = "<group>";
+		};
+		CEF1DE7627536A3600212154 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE90C24B27524B6F006AE809 /* InitialViewController.swift */,
+				CEF1DE7727536A6100212154 /* SignInViewController.swift */,
+				CEF1DE7827536A6100212154 /* SignInViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE90C25427524B71006AE809 /* LaunchScreen.storyboard in Resources */,
+				CEF1DE7A27536A6100212154 /* SignInViewController.xib in Resources */,
 				CE90C25127524B71006AE809 /* Assets.xcassets in Resources */,
-				CE90C24F27524B6F006AE809 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE90C24C27524B6F006AE809 /* ViewController.swift in Sources */,
+				CEF1DE7927536A6100212154 /* SignInViewController.swift in Sources */,
+				CE90C24C27524B6F006AE809 /* InitialViewController.swift in Sources */,
 				CE90C24827524B6F006AE809 /* AppDelegate.swift in Sources */,
 				CE90C24A27524B6F006AE809 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +159,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE90C24D27524B6F006AE809 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE90C24E27524B6F006AE809 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE90C25227524B71006AE809 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +298,6 @@
 				INFOPLIST_FILE = SCInstagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +325,6 @@
 				INFOPLIST_FILE = SCInstagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
