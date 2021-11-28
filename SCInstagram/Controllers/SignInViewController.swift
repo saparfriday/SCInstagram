@@ -21,7 +21,8 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func forgotPasswordDidTapped(_ sender: UIButton) {
-        print("forgot password did tapped")
+        let vc = UINavigationController(rootViewController: ForgotPasswordViewController())
+        navigationController?.present(vc, animated: true)
     }
     
     @IBAction func loginDidTapped(_ sender: UIButton) {

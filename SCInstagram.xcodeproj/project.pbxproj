@@ -16,6 +16,8 @@
 		CEF1DE7A27536A6100212154 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE7827536A6100212154 /* SignInViewController.xib */; };
 		CEF1DE7D275370DC00212154 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE7B275370DB00212154 /* SignUpViewController.swift */; };
 		CEF1DE7E275370DC00212154 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE7C275370DC00212154 /* SignUpViewController.xib */; };
+		CEF1DE812753772400212154 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE7F2753772400212154 /* ForgotPasswordViewController.swift */; };
+		CEF1DE822753772400212154 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE802753772400212154 /* ForgotPasswordViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CEF1DE7827536A6100212154 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		CEF1DE7B275370DB00212154 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CEF1DE7C275370DC00212154 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		CEF1DE7F2753772400212154 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CEF1DE802753772400212154 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				CEF1DE7827536A6100212154 /* SignInViewController.xib */,
 				CEF1DE7B275370DB00212154 /* SignUpViewController.swift */,
 				CEF1DE7C275370DC00212154 /* SignUpViewController.xib */,
+				CEF1DE7F2753772400212154 /* ForgotPasswordViewController.swift */,
+				CEF1DE802753772400212154 /* ForgotPasswordViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 				CEF1DE7A27536A6100212154 /* SignInViewController.xib in Resources */,
 				CEF1DE7E275370DC00212154 /* SignUpViewController.xib in Resources */,
 				CE90C25127524B71006AE809 /* Assets.xcassets in Resources */,
+				CEF1DE822753772400212154 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +165,7 @@
 			files = (
 				CEF1DE7927536A6100212154 /* SignInViewController.swift in Sources */,
 				CE90C24C27524B6F006AE809 /* InitialViewController.swift in Sources */,
+				CEF1DE812753772400212154 /* ForgotPasswordViewController.swift in Sources */,
 				CE90C24827524B6F006AE809 /* AppDelegate.swift in Sources */,
 				CE90C24A27524B6F006AE809 /* SceneDelegate.swift in Sources */,
 				CEF1DE7D275370DC00212154 /* SignUpViewController.swift in Sources */,
