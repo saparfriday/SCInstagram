@@ -18,6 +18,17 @@
 		CEF1DE7E275370DC00212154 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE7C275370DC00212154 /* SignUpViewController.xib */; };
 		CEF1DE812753772400212154 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE7F2753772400212154 /* ForgotPasswordViewController.swift */; };
 		CEF1DE822753772400212154 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE802753772400212154 /* ForgotPasswordViewController.xib */; };
+		CEF1DE8727537BC500212154 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE8627537BC500212154 /* TabbarController.swift */; };
+		CEF1DE8A27537BF800212154 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE8827537BF800212154 /* FeedViewController.swift */; };
+		CEF1DE8B27537BF800212154 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE8927537BF800212154 /* FeedViewController.xib */; };
+		CEF1DE8E27537C0900212154 /* InterestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE8C27537C0900212154 /* InterestingViewController.swift */; };
+		CEF1DE8F27537C0900212154 /* InterestingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE8D27537C0900212154 /* InterestingViewController.xib */; };
+		CEF1DE9227537C1300212154 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE9027537C1300212154 /* AddViewController.swift */; };
+		CEF1DE9327537C1300212154 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE9127537C1300212154 /* AddViewController.xib */; };
+		CEF1DE9627537C2100212154 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE9427537C2100212154 /* ActivitiesViewController.swift */; };
+		CEF1DE9727537C2100212154 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE9527537C2100212154 /* ActivitiesViewController.xib */; };
+		CEF1DE9A27537C2B00212154 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1DE9827537C2B00212154 /* ProfileViewController.swift */; };
+		CEF1DE9B27537C2B00212154 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1DE9927537C2B00212154 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +45,17 @@
 		CEF1DE7C275370DC00212154 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		CEF1DE7F2753772400212154 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CEF1DE802753772400212154 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		CEF1DE8627537BC500212154 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		CEF1DE8827537BF800212154 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		CEF1DE8927537BF800212154 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		CEF1DE8C27537C0900212154 /* InterestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingViewController.swift; sourceTree = "<group>"; };
+		CEF1DE8D27537C0900212154 /* InterestingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestingViewController.xib; sourceTree = "<group>"; };
+		CEF1DE9027537C1300212154 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		CEF1DE9127537C1300212154 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		CEF1DE9427537C2100212154 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		CEF1DE9527537C2100212154 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
+		CEF1DE9827537C2B00212154 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEF1DE9927537C2B00212154 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +102,15 @@
 			isa = PBXGroup;
 			children = (
 				CE90C24B27524B6F006AE809 /* InitialViewController.swift */,
+				CEF1DE8427537B8200212154 /* Authentication */,
+				CEF1DE8527537B9200212154 /* App */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEF1DE8427537B8200212154 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
 				CEF1DE7727536A6100212154 /* SignInViewController.swift */,
 				CEF1DE7827536A6100212154 /* SignInViewController.xib */,
 				CEF1DE7B275370DB00212154 /* SignUpViewController.swift */,
@@ -87,7 +118,25 @@
 				CEF1DE7F2753772400212154 /* ForgotPasswordViewController.swift */,
 				CEF1DE802753772400212154 /* ForgotPasswordViewController.xib */,
 			);
-			path = Controllers;
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CEF1DE8527537B9200212154 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1DE8627537BC500212154 /* TabbarController.swift */,
+				CEF1DE8827537BF800212154 /* FeedViewController.swift */,
+				CEF1DE8927537BF800212154 /* FeedViewController.xib */,
+				CEF1DE8C27537C0900212154 /* InterestingViewController.swift */,
+				CEF1DE8D27537C0900212154 /* InterestingViewController.xib */,
+				CEF1DE9027537C1300212154 /* AddViewController.swift */,
+				CEF1DE9127537C1300212154 /* AddViewController.xib */,
+				CEF1DE9427537C2100212154 /* ActivitiesViewController.swift */,
+				CEF1DE9527537C2100212154 /* ActivitiesViewController.xib */,
+				CEF1DE9827537C2B00212154 /* ProfileViewController.swift */,
+				CEF1DE9927537C2B00212154 /* ProfileViewController.xib */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +201,12 @@
 				CEF1DE7A27536A6100212154 /* SignInViewController.xib in Resources */,
 				CEF1DE7E275370DC00212154 /* SignUpViewController.xib in Resources */,
 				CE90C25127524B71006AE809 /* Assets.xcassets in Resources */,
+				CEF1DE8F27537C0900212154 /* InterestingViewController.xib in Resources */,
+				CEF1DE8B27537BF800212154 /* FeedViewController.xib in Resources */,
+				CEF1DE9327537C1300212154 /* AddViewController.xib in Resources */,
 				CEF1DE822753772400212154 /* ForgotPasswordViewController.xib in Resources */,
+				CEF1DE9B27537C2B00212154 /* ProfileViewController.xib in Resources */,
+				CEF1DE9727537C2100212154 /* ActivitiesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +217,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF1DE9227537C1300212154 /* AddViewController.swift in Sources */,
 				CEF1DE7927536A6100212154 /* SignInViewController.swift in Sources */,
 				CE90C24C27524B6F006AE809 /* InitialViewController.swift in Sources */,
+				CEF1DE9627537C2100212154 /* ActivitiesViewController.swift in Sources */,
 				CEF1DE812753772400212154 /* ForgotPasswordViewController.swift in Sources */,
+				CEF1DE8E27537C0900212154 /* InterestingViewController.swift in Sources */,
+				CEF1DE9A27537C2B00212154 /* ProfileViewController.swift in Sources */,
 				CE90C24827524B6F006AE809 /* AppDelegate.swift in Sources */,
 				CE90C24A27524B6F006AE809 /* SceneDelegate.swift in Sources */,
 				CEF1DE7D275370DC00212154 /* SignUpViewController.swift in Sources */,
+				CEF1DE8A27537BF800212154 /* FeedViewController.swift in Sources */,
+				CEF1DE8727537BC500212154 /* TabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

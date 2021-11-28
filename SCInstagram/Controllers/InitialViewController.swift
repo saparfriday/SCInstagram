@@ -8,14 +8,24 @@
 import UIKit
 
 class InitialViewController: UIViewController {
+    
+    var isAuthentication: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let vc = UINavigationController(rootViewController: SignInViewController())
-        vc.modalPresentationStyle = .fullScreen
-        navigationController?.present(vc, animated: true)
+        if isAuthentication {
+            let vc = TabbarController()
+            vc.modalPresentationStyle = .fullScreen
+            navigationController?.present(vc, animated: true)
+        } else {
+            let vc = UINavigationController(rootViewController: SignInViewController())
+            vc.modalPresentationStyle = .fullScreen
+            navigationController?.present(vc, animated: true)
+        }
+        
+        
     }
 
 

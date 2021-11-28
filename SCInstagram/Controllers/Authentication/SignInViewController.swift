@@ -26,10 +26,6 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func loginDidTapped(_ sender: UIButton) {
-        let email = emailTextField.text
-        let password = passwordTextField.text
-        print("email: \(email), password: \(password)")
-        print("Login in did tapped")
     }
     
     @IBAction func signUpDidTapped(_ sender: UIButton) {
