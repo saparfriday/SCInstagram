@@ -7,20 +7,27 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ProfileViewController: UIViewController {
+    
+    // MARK: - Data
+    
+    var myUser: User?
+    
+    // MARK: - Views
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Profile"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(settingsDidTapped))
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "ProfileHeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProfileHeaderCollectionReusableView")
+        fetchMyUser()
+        configureLayout()
     }
+    
+    // MARK: - Actions
     
     @objc func settingsDidTapped() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -40,12 +47,52 @@ class ProfileViewController: UIViewController {
         
         navigationController?.present(alert, animated: true)
     }
+    
+    // MARK: - Methods
+    
+    private func fetchMyUser() {
+        let uid = Auth.auth().currentUser?.uid ?? "uidNotFound"
+        let ref = Firestore.firestore().collection("users").document(uid)
+        
+        ref.getDocument { documentSnapshot, error in
+            if let error = error {
+                self.showHUD(.error(text: error.localizedDescription))
+                return
+            }
+            
+            if let documentSnapshot = documentSnapshot, documentSnapshot.exists {
+                do {
+                    let model = try documentSnapshot.data(as: User.self)
+                    self.myUser = model
+                    self.collectionView.reloadData()
+                } catch {
+                    self.showHUD(.error(text: error.localizedDescription))
+                }
+            }
+        }
+        
+    }
+    
+    // MARK: - Layout
+    
+    private func configureLayout() {
+        navigationItem.title = "Profile"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(settingsDidTapped))
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "ProfileHeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProfileHeaderCollectionReusableView")
+    }
 
 }
+
+// MARK: - CollectionView Delegate
 
 extension ProfileViewController: UICollectionViewDelegate {
     
 }
+
+// MARK: - CollectionView DataSource
 
 extension ProfileViewController: UICollectionViewDataSource {
     
@@ -59,10 +106,15 @@ extension ProfileViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderCollectionReusableView", for: indexPath) as! ProfileHeaderCollectionReusableView
+        if let user = myUser {
+            headerView.setup(user)
+        }
         return headerView
     }
     
 }
+
+// MARK: - CollectionView FlowLayout
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     

@@ -14,5 +14,6 @@ target 'SCInstagram' do
 
   # Helpers
   pod 'SVProgressHUD'
+  pod 'Kingfisher'
   
 end
