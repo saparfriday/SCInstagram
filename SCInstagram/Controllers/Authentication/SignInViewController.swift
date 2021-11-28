@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol SignInDelegate: AnyObject {
+    func signSuccessfully()
+}
+
 class SignInViewController: UIViewController {
+    
+    // MARK: - Data
+    
+    weak var delegate: SignInDelegate?
+    
+    // MARK: - Views
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -15,10 +25,14 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 5
     }
+    
+    // MARK: - Actions
 
     @IBAction func forgotPasswordDidTapped(_ sender: UIButton) {
         let vc = UINavigationController(rootViewController: ForgotPasswordViewController())
@@ -29,8 +43,22 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signUpDidTapped(_ sender: UIButton) {
-        let vc = UINavigationController(rootViewController: SignUpViewController())
-        navigationController?.present(vc, animated: true)
+        let vc = SignUpViewController()
+        vc.delegate = self
+        let nav = UINavigationController(rootViewController: vc)
+        navigationController?.present(nav, animated: true)
+    }
+    
+}
+
+// MARK: - Sign Up Delegate
+
+extension SignInViewController: SignUpDelegate {
+    
+    func signUpSuccessfully() {
+        dismiss(animated: true) {
+            self.delegate?.signSuccessfully()
+        }
     }
     
 }

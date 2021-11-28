@@ -6,8 +6,19 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+protocol SignUpDelegate: AnyObject {
+    func signUpSuccessfully()
+}
 
 class SignUpViewController: UIViewController {
+    
+    // MARK: - Data
+    
+    weak var delegate: SignUpDelegate?
+    
+    // MARK: - Views
 
     @IBOutlet weak var avatarImageView: UIImageView!
     
@@ -18,6 +29,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var signUpButton: UIButton!
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +43,8 @@ class SignUpViewController: UIViewController {
         avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(avatarDidTapped)))
     }
     
+    // MARK: - Actions
+    
     @objc func closeDidTapped() {
         dismiss(animated: true)
     }
@@ -39,6 +54,18 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func signUpDidTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else { return }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            self.dismiss(animated: true) {
+                self.delegate?.signUpSuccessfully()
+            }
+        }
     }
     
 }

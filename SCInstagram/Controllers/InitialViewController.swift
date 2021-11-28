@@ -6,28 +6,36 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class InitialViewController: UIViewController {
-    
-    var isAuthentication: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        if isAuthentication {
+        checkAuth()
+        view.backgroundColor = .red
+    }
+    
+    func checkAuth() {
+        if Auth.auth().currentUser != nil {
             let vc = TabbarController()
             vc.modalPresentationStyle = .fullScreen
             navigationController?.present(vc, animated: true)
         } else {
-            let vc = UINavigationController(rootViewController: SignInViewController())
-            vc.modalPresentationStyle = .fullScreen
-            navigationController?.present(vc, animated: true)
+            let vc = SignInViewController()
+            vc.delegate = self
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            navigationController?.present(nav, animated: true)
         }
-        
-        
     }
-
 
 }
 
+extension InitialViewController: SignInDelegate {
+    
+    func signSuccessfully() {
+        checkAuth()
+    }
+    
+}
