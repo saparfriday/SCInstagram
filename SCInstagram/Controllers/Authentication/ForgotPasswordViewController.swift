@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ForgotPasswordViewController: UIViewController {
 
@@ -26,7 +27,15 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func recoverDidTapped(_ sender: UIButton) {
-        print("recover did tapped")
+        guard let email = emailTextField.text else { return }
+        
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            print("sended")
+        }
     }
     
 }

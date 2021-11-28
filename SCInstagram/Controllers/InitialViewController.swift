@@ -9,12 +9,20 @@ import UIKit
 import FirebaseAuth
 
 class InitialViewController: UIViewController {
+    
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkAuth()
         view.backgroundColor = .red
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkAuth()
+    }
+    
+    // MARK: - Methods
     
     func checkAuth() {
         if Auth.auth().currentUser != nil {
@@ -22,20 +30,10 @@ class InitialViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             navigationController?.present(vc, animated: true)
         } else {
-            let vc = SignInViewController()
-            vc.delegate = self
-            let nav = UINavigationController(rootViewController: vc)
+            let nav = UINavigationController(rootViewController: SignInViewController())
             nav.modalPresentationStyle = .fullScreen
             navigationController?.present(nav, animated: true)
         }
     }
 
-}
-
-extension InitialViewController: SignInDelegate {
-    
-    func signSuccessfully() {
-        checkAuth()
-    }
-    
 }

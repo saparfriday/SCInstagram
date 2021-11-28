@@ -6,16 +6,9 @@
 //
 
 import UIKit
-
-protocol SignInDelegate: AnyObject {
-    func signSuccessfully()
-}
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
-    
-    // MARK: - Data
-    
-    weak var delegate: SignInDelegate?
     
     // MARK: - Views
 
@@ -40,6 +33,17 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func loginDidTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func signUpDidTapped(_ sender: UIButton) {
@@ -56,9 +60,7 @@ class SignInViewController: UIViewController {
 extension SignInViewController: SignUpDelegate {
     
     func signUpSuccessfully() {
-        dismiss(animated: true) {
-            self.delegate?.signSuccessfully()
-        }
+        dismiss(animated: true)
     }
     
 }
