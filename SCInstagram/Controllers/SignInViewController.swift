@@ -32,7 +32,8 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signUpDidTapped(_ sender: UIButton) {
-        print("Sign Up did tapped")
+        let vc = UINavigationController(rootViewController: SignUpViewController())
+        navigationController?.present(vc, animated: true)
     }
     
 }
